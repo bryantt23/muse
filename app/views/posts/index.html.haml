@@ -5,5 +5,8 @@
   %p
     = post.comments.count
     Comments
+  %p
+    = post.get_likes.size
+    Likes
 
 = link_to "New Inspiration", new_post_path
