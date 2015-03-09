@@ -1,4 +1,9 @@
 - @posts.each do |post|
+  = image_tag post.image.url(:small)
+  = image_tag post.image.url(:medium)
   %h2= link_to post.title, post
+  %p
+    = post.comments.count
+    Comments
 
-=link_to "Add New Inspiration", new_post_path
+= link_to "New Inspiration", new_post_path
